@@ -9,6 +9,7 @@ echo "[+] Only continue if you modified the conf/Caddyfile file already. In that
 read
 
 if [ $(docker network ls | grep ${network_name} | wc -l) -eq 0 ]; then
+	echo "[+] Create caddy_net network."
 	docker network create ${network_name}
 fi
 
