@@ -1,0 +1,9 @@
+[Unit]
+Description=Caddy docker DNS update
+
+[Service]
+Type=oneshot
+User=user
+Group=user
+WorkingDirectory=/home/user/caddy-docker-dns
+ExecStart=/home/user/caddy-docker-dns/update.sh
